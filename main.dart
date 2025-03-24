@@ -25,34 +25,78 @@ class _MyHomePageState extends State<MyHomePage> {
   bool isGridView = false;
 
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
-  final List<Map<String, String>> item = [
+  final List<Map<String, String>> itemList = [
     {
       "image": "https://down-vn.img.susercontent.com/file/6c8ce68755430b006d955485379dda8f",
-      "text": "Mô hình Dante Masamune 1/100 chính hãng nhà Moshow Toys  "
+      "text": "Mô hình Dante Masamune 1/100 chính hãng nhà Moshow Toys",
+      "price":"Giá: 1400k"
     },
     {
       "image": "https://th.bing.com/th/id/R.48943541bcd7e5ddc63c39e7f19acc9e?rik=m4DplnVgzTkbJw&riu=http%3a%2f%2fvcagundam.sg%2fcdn%2fshop%2ffiles%2fA0_803f9421-9d3a-49b2-9479-dc880b0a00c5.jpg%3fv%3d1727407116&ehk=s8FWyNTlGvl8%2flJ6J1%2b7N17pLu%2f11005Rl8bAeUFk%2bQ%3d&risl=&pid=ImgRaw&r=0",
-      "text": "Mô hình Lone Shadow 1/10 chính hãng nhà Hemoxian là kit lắp ráp với nhiếu hiệu ứng "
+      "text": "Mô hình Lone Shadow 1/10 chính hãng nhà Hemoxian là kit lắp ráp với nhiếu hiệu ứng",
+      "price":"Giá: 850k"
     },
     {
       "image": "https://th.bing.com/th/id/R.527cf65fedd83d58b8a9a4a9be9bc34d?rik=vAYB968HMGmjxg&riu=http%3a%2f%2fhobbyzoneuk.co.uk%2fcdn%2fshop%2ffiles%2fHemoxian_Tastier_01.jpg%3fv%3d1707220038&ehk=gaz2BScW4C%2br17yJrO%2fdqBVLfg6jzY5O2fwuo31YrPQ%3d&risl=&pid=ImgRaw&r=0",
-      "text": "Mô hình Tastỉe 1/10 chính hãng nhà Hemoxian là đối thủ của Lone Shadow "
+      "text": "Mô hình Tastỉe 1/10 chính hãng nhà Hemoxian là đối thủ của Lone Shadow",
+      "price":"Giá: 850k"
     },
     {
       "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m2ghzxp6wvck1f",
-      "text": "Mô hình Táo thiện xạ là kit chính hãng trong phim Robo trái cây "
+      "text": "Mô hình Táo thiện xạ là kit chính hãng trong phim Robo trái cây",
+      "price":"Giá: 500k"
     },
     {
       "image": "https://th.bing.com/th/id/OIP.OAEErXfEpic49BjD-nHA1QHaHa?w=209&h=209&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-      "text": "Mô hình Quýt kiếm sĩ là kit chính hãng trong phim Robo trái cây "
+      "text": "Mô hình Quýt kiếm sĩ là kit chính hãng trong phim Robo trái cây",
+      "price":"Giá: 500k"
     },
     {
       "image": "https://th.bing.com/th/id/OIP.xTVOTab8EvVPBR-y319ZJwHaHa?w=199&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-      "text": "Mô hình Thơm giác đấu là kit chính hãng trong phim Robo trái cây "
+      "text": "Mô hình Thơm giác đấu là kit chính hãng trong phim Robo trái cây",
+      "price":"Giá: 500k"
     },
     {
       "image": "https://th.bing.com/th/id/OIP.dfSda-ywn__r6DyPvXP82QHaHa?w=202&h=200&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-      "text": "Mô hình Aobing là Ngao bính-Tam thái tử của Ngao Quảng- Đông Hải Long Vương "
+      "text": "Mô hình Aobing là Ngao bính-Tam thái tử của Ngao Quảng- Đông Hải Long Vương",
+      "price":"Giá: 1100k"
+    },
+  ];
+  final List<Map<String, String>> itemGrid = [
+    {
+      "image": "https://down-vn.img.susercontent.com/file/6c8ce68755430b006d955485379dda8f",
+      "text": "Mô hình Dante Masamune 1/100",
+      "price":"Giá: 1400k"
+    },
+    {
+      "image": "https://th.bing.com/th/id/R.48943541bcd7e5ddc63c39e7f19acc9e?rik=m4DplnVgzTkbJw&riu=http%3a%2f%2fvcagundam.sg%2fcdn%2fshop%2ffiles%2fA0_803f9421-9d3a-49b2-9479-dc880b0a00c5.jpg%3fv%3d1727407116&ehk=s8FWyNTlGvl8%2flJ6J1%2b7N17pLu%2f11005Rl8bAeUFk%2bQ%3d&risl=&pid=ImgRaw&r=0",
+      "text": "Mô hình Lone Shadow 1/10",
+      "price":"Giá: 850k"
+    },
+    {
+      "image": "https://th.bing.com/th/id/R.527cf65fedd83d58b8a9a4a9be9bc34d?rik=vAYB968HMGmjxg&riu=http%3a%2f%2fhobbyzoneuk.co.uk%2fcdn%2fshop%2ffiles%2fHemoxian_Tastier_01.jpg%3fv%3d1707220038&ehk=gaz2BScW4C%2br17yJrO%2fdqBVLfg6jzY5O2fwuo31YrPQ%3d&risl=&pid=ImgRaw&r=0",
+      "text": "Mô hình Tastỉe 1/10",
+      "price":"Giá: 850k"
+    },
+    {
+      "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m2ghzxp6wvck1f",
+      "text": "Mô hình Táo thiện xạ",
+      "price":"Giá: 500k"
+    },
+    {
+      "image": "https://th.bing.com/th/id/OIP.OAEErXfEpic49BjD-nHA1QHaHa?w=209&h=209&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+      "text": "Mô hình Quýt kiếm sĩ",
+      "price":"Giá: 500k"
+    },
+    {
+      "image": "https://th.bing.com/th/id/OIP.xTVOTab8EvVPBR-y319ZJwHaHa?w=199&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+      "text": "Mô hình Thơm giác đấu",
+      "price":"Giá: 500k"
+    },
+    {
+      "image": "https://th.bing.com/th/id/OIP.dfSda-ywn__r6DyPvXP82QHaHa?w=202&h=200&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+      "text": "Mô hình Aobing 1/100",
+    "price":"Giá: 1100k"
     },
   ];
   final List<String> menuItems = [
@@ -194,12 +238,15 @@ class _MyHomePageState extends State<MyHomePage> {
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
+                crossAxisCount: 2, // 2 cột
+                crossAxisSpacing: 10, // Khoảng cách giữa các phần tử
+                mainAxisSpacing: 10, // Khoảng cách giữa các phần tử
               ),
-              itemCount: item.length,
+              itemCount: itemGrid.length,
               itemBuilder: (context, index) {
+                double widthCard = MediaQuery.of(context).size.width / 2 - 20;
+                double heightCard = widthCard * 2; // Chiều dài gấp đôi chiều rộng
+
                 return Card(
                   elevation: 5,
                   shadowColor: Colors.black,
@@ -207,60 +254,86 @@ class _MyHomePageState extends State<MyHomePage> {
                     borderRadius: BorderRadius.circular(15),
                   ),
                   margin: EdgeInsets.all(10),
+
+
                   child: Stack(
                     alignment: Alignment.bottomCenter,
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15),
-                        child: Image.network(
-                          item[index]["image"]!,
+                        child:
+                        Image.network(
+                          itemGrid[index]["image"]!,
+                          height: widthCard,
+                          width: widthCard,
                           fit: BoxFit.cover,
+
 
                         ),
                       ),
+                      Positioned(
+                        top: 3,
+                        right: 3,
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.favorite,
+                            color: isHeartPressedList[index] ? Colors.red : Colors.grey,
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              isHeartPressedList[index] = !isHeartPressedList[index];
+                            });
+                          },
+                        ),
+                      ),
                       Container(
+                        height:30,
                         color: Colors.black.withOpacity(0.5),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            IconButton(
-                              icon: Icon(Icons.shopping_cart, color: Colors.white),
-                              onPressed: () {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text(
-                                      "Đã bấm vào giỏ hàng",
-                                      style: TextStyle(fontSize: 20),
-                                    ),
-                                    behavior: SnackBarBehavior.floating,
-                                    margin: EdgeInsets.all(10),
-                                  ),
-                                );
-                              },
+                            Text(itemList[index]["price"]!,
+                              style: TextStyle(fontSize: 20,color: Colors.white),
                             ),
-                            IconButton(
-                              icon: Icon(
-                                Icons.favorite,
-                                color: isHeartPressedList[index] ? Colors.red : Colors.grey,
+                            Align(
+                              alignment: Alignment.centerRight,
+                              child: Row(
+                                children: [IconButton(
+
+                                  onPressed: () {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                          "Đã bấm vào giỏ hàng",
+                                          style: TextStyle(fontSize: 20),
+                                        ),
+                                        behavior: SnackBarBehavior.floating,
+                                        margin: EdgeInsets.all(10),
+                                      ),
+                                    );
+                                  },
+                                  icon: Icon(Icons.shopping_cart,color: Colors.white,),
+                                ),
+
+
+                                ],
                               ),
-                              onPressed: () {
-                                setState(() {
-                                  isHeartPressedList[index] = !isHeartPressedList[index];
-                                });
-                              },
-                            ),
+                            )
                           ],
                         ),
                       ),
                     ],
                   ),
                 );
+
               },
             )
+
+
                 : ListView.builder(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
-              itemCount: item.length,
+              itemCount: itemList.length,
               itemBuilder: (context, index) {
                 return Card(
                   elevation: 5,
@@ -276,7 +349,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Padding(
                           padding: EdgeInsets.all(5),
                           child: Image.network(
-                            item[index]["image"]!,
+                            itemList[index]["image"]!,
                             fit: BoxFit.fill,
                           ),
                         ),
@@ -289,38 +362,51 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Column(
                             children: [
                               Text(
-                                item[index]["text"]!,
+                                itemList[index]["text"]!,
                                 style: TextStyle(fontSize: 20),
                               ),
                               SizedBox(height: 5),
                               Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  IconButton(
-                                    icon: Icon(Icons.shopping_cart),
-                                    onPressed: () {
-                                      ScaffoldMessenger.of(context).showSnackBar(
-                                        SnackBar(
-                                          content: Text(
-                                            "Đã bấm vào giỏ hàng",
-                                            style: TextStyle(fontSize: 20),
+                                  Text(itemList[index]["price"]!,
+                                    style: TextStyle(fontSize: 20),
+                                  ),
+                                  Align(
+                                    alignment: Alignment.centerRight,
+                                    child: Row(
+                                      children: [TextButton(
+                                        child: Text("Mua ngay",style: TextStyle(fontSize: 20,color: Colors.cyan),),
+                                        onPressed: () {
+                                          ScaffoldMessenger.of(context).showSnackBar(
+                                            SnackBar(
+                                              content: Text(
+                                                "Đã bấm vào giỏ hàng",
+                                                style: TextStyle(fontSize: 20),
+                                              ),
+                                              behavior: SnackBarBehavior.floating,
+                                              margin: EdgeInsets.all(10),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                        IconButton(
+                                          icon: Icon(
+                                            Icons.favorite,
+                                            color: isHeartPressedList[index] ? Colors.red : Colors.grey,
                                           ),
-                                          behavior: SnackBarBehavior.floating,
-                                          margin: EdgeInsets.all(10),
+                                          onPressed: () {
+                                            setState(() {
+                                              isHeartPressedList[index] = !isHeartPressedList[index];
+                                            });
+                                          },
                                         ),
-                                      );
-                                    },
-                                  ),
-                                  IconButton(
-                                    icon: Icon(
-                                      Icons.favorite,
-                                      color: isHeartPressedList[index] ? Colors.red : Colors.grey,
+
+                                      ],
                                     ),
-                                    onPressed: () {
-                                      setState(() {
-                                        isHeartPressedList[index] = !isHeartPressedList[index];
-                                      });
-                                    },
-                                  ),
+                                  )
+
+
                                 ],
                               ),
                             ],
